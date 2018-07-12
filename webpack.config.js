@@ -1,6 +1,4 @@
 const path = require('path');
-
-var extend = require("xtend");
 var glob_entries = require('webpack-glob-entries');
 
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
@@ -9,7 +7,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
     mode: 'development',
-    entry: glob_entries('./src/js/*.js', './src/scss/*.scss'),
+    entry: glob_entries('./src/js/*.js'),
     output: {
         filename: '[name].js',
         path: path.resolve(__dirname, 'public/js')
@@ -27,12 +25,21 @@ module.exports = {
                 }
             },
             {
-                test: /\.scss$/,
-                exclude: /node_modules/,
+                test: /\.(scss)$/,
                 use: [
-                    process.env.NODE_ENV !== 'production' ? 'style-loader' : MiniCssExtractPlugin.loader,
-                    "css-loader",
-                    "sass-loader"
+                    MiniCssExtractPlugin.loader,//style-loader
+                    {
+                        loader: "css-loader",
+                        options: {
+                            sourceMap: true
+                        }
+                    },
+                    {
+                        loader: "sass-loader",
+                        options: {
+                            sourceMap: true,
+                        }
+                    }
                 ]
             }
         ]
@@ -44,7 +51,10 @@ module.exports = {
             proxy: 'http://localhost/webpack'
         }),
         new MiniCssExtractPlugin({
-            filename: "[name].css",
+            // Options similar to the same options in webpackOptions.output
+            // both options are optional
+            filename: "../css/[name].css",
+            // path: path.resolve(__dirname, 'public/css'),
             chunkFilename: "[id].css"
         })
     ]

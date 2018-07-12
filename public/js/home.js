@@ -94,7 +94,18 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nconsole.log('home init');\n\nconsole.log('home end');\n\n//# sourceURL=webpack:///./src/js/home.js?");
+eval("\n\n__webpack_require__(/*! ../scss/home.scss */ \"./src/scss/home.scss\");\n\nconsole.log('home init');\nconsole.log('home end');\n\n//# sourceURL=webpack:///./src/js/home.js?");
+
+/***/ }),
+
+/***/ "./src/scss/home.scss":
+/*!****************************!*\
+  !*** ./src/scss/home.scss ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/scss/home.scss?");
 
 /***/ })
 
