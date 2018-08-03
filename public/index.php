@@ -1,16 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Webpack</title>
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/home.css">
-</head>
-<body>
+    <title>Star Wars</title>
+  </head>
+  <body>
+    <h1>Star Wars</h1>
 
-    <h1>Webpack</h1>
+    <div class="site">
+        <header class="header">
+
+        </header>
+
+        <main class="main">
+
+            <div id="app">
+                <title>{{title}}</title>
+            </div>
+
+        </main>
+
+        <footer class="footer">
+        </footer>
+
+    </div><!-- .site -->
 
     <script src="js/home.js"></script>
-</body>
+  </body>
 </html>

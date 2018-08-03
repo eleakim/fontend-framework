@@ -40,6 +40,8 @@
     "autoprefixer": "^8.6.5",
     "browser-sync": "^2.24.5",
     "mini-css-extract-plugin": "^0.4.1",
-    "precss": "^3.1.2"
+    "precss": "^3.1.2",
+    "vue": "^2.5.16",
+    "vue-cli": "^2.9.6"
   }
 }
